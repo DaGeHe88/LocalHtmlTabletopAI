@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SoG Solo System</title>
+
+    <!-- Bootstrap -->
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="sogstuff/customsog.css" rel="stylesheet">
+
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/npm.js"></script>
+      <script src="js/scripts.js"></script>
+      
+    <![endif]-->
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="sogstuff/sog.js"></script>
+      <div class="navbar navbar-default" role="navigation">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="index.php">Digital Game Aides</a>
+	    </div>
+	    <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav navbar-right">
+		<li><a href="sog.html">Solitaire System V1.0</a></li>
+		<!-- <li><a href="soggenerator.html">Mission Generator</a></li> -->
+		<li class="active"><a href="howtosog.html">How to use</a></li>
+		<li><a href="http://www.sailsofglory.org/showthread.php?4174-Digital-Game-Aides-Solitaire-Play&p=63383#post63383">Discussion</a></li>
+	      </ul>
+	    </div>
+	  </div>
+      </div>
+      
+    
+      
+      
+      <div class="container">
+	<div class="panel">
+	  <div class="panel-body">
+	    
+	      <div class="btn-group col-md-12">
+		<h1>Welcome</h1>
+		<p>Welcome to the web based solo software used with Sails of Glory. It is best viewed and used on mobile devices.
+		For any kind of feedback contact me via the "Feedback" button on the main "Digital Game Aides" page by pressing the link in the top left corner. This project will only improve with input from users.
+		Even 1 user that supplies good input will result in the generating of a newer version of the software. Feedback can (but should not be limitied to) include:</p>
+		<li>Bugs and other non compatibility</li>
+		<li>New features (this one is hard to incorporate quickly but I am interested nonetheless)</li>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h1>Quick Reference on how to use the software</h1>
+		<p>After picking a target for the AI, the user (human player) tells the AI player what the current situation looks. Note that refreshing the browser resets all
+		the data. Follow the next steps to use the software:</p>
+		<li>Cycle between 1 to 4 solo ships.</li>
+		<li>Under ship info describe the solo and target ship.</li>
+		<li>Select target distance (mast to mast).</li>
+		<li>Select target ship relative heading.</li>
+		<li>Select target ship relative location.</li>
+		<li>Select previous maneuver veer rating.</li>
+		<li>(optional) select closest point to playing area border.</li>
+		<li>Select wind situation.</li>
+		<li>Under crew actions and damages select the final settings and press Compute crew actions</li>
+		<li>Press Compute Maneuver for a maneuver solution</li>
+		<p>After that is selected the user presses compute Maneuvers and follows as closely as possible the given maneuver for the AI player to perform. Unlike the WoG solo software it is imperative
+		that all the settings are made properly due to the complexity of the game.</p>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>The mechanics of the software</h3>
+		<p>All these steps are used to describe a certain situation. It draws a 2 dimensial (internal) image for the software and sellects an array of maneuvers
+		available under those circumstances for the software. It then proceeds to perform every maneuver in it's head and decides which is the best one.
+		The software is even smart enough to sometimes turn away from an enemy ship to keep the best possible firing solution. After this computation it selects
+		one maneuver out of a selection of what it considers to be good maneuvers and then displays it to you. This last selection makes sure the software is
+		not entirely predictable.</p>
+	      </div>
+	    
+	      <div class="btn-group col-md-12">
+		<h1>Expanded step list</h1>
+		<h3>Picking a target</h3>
+		<p>I have seen that this is highly subjective to the person setting up the scenario and I advise you apply some personal preference to this but the following rules should hold up pretty good:</p>
+		<li>In general, solo ships pick the closest target and then stick to it. If a different target appears within gun range without the main target being within gun range then you can roll a dice
+		(or flipping a coin) giving a 50% chance that the solo ship will follow it's new target.</li>
+		<li>When playing a scenario where a specific ship or other target must be destroyed/intercepted roll a dice at the beginning of the game giving a 50 % chance to focus on mission targets or any targets.
+		If the focus is on mission targets than the previous rule applies again. It is up to the player to decide if the solo ship can switch mid game to any target if the opportunity comes up.</li>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>Ship 1 to 4</h3>
+		<p>Here you can quickly cycle between solo ships under command of the software. Each option stores the damages and other data for a ship so you don't have
+		to reset everything if you are using more than 1 ship.</p>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>Ship info</h3>
+		<p>Select ship "classes" and veer rating (damages to the veer rating are subtracted automatically).</p>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>Select target distance</h3>
+		<p>Select the distance to the main target from main mast to main mast.</p>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>Select target ship relative heading</h3>
+		<p>Select the relative heading of the target ship.</p>
+		<li>Example: If the solo ship is heading exactly north and the target ship is heading exactly west the relative heading is 90 degrees left.</li>
+		<li>Example 2: if the solo ship is heading exactly south and the target ship is heading exactly east the relative heading is also 90 degrees left.</li>
+		<p>This helps to extrapolate the target position for the software.</p>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>Zone 1 through 12</h3>
+		<p>Here the target ship relative location is selected. Zones range from 1 to 12 (0 as an empty starting entry).</p>
+		<p>Zone 1 through 6 comprise the first 180 degree of the clockwise followed circle around the solo ship and zone 7 through 12 the last 180 degree.</p>
+		<p>Note, zone 12 is NOT straight ahead as seen on an ordinary clock. Zone 12 is slightly offset to the left and zone 1 is slightly offset to the right.</p>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>Select previous maneuver veer rating</h3>
+		<p>Here you can select the previous maneuver veer rating (not including red cards' veer rating).</p>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>Closest point playing area border</h3>
+		<p>Herer you can make a selection to prevent to ship to "sail of the edge of the earth".</p>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>Select wind situation</h3>
+		<p>Here you can select the (estimated) wind condition. It is up to the user to measure or approximate. This mostly selects which moves are optional for
+		the software so there really isn't any cheating involved.</p>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>Crew actions and ship damages</h3>
+		<p>Vital information, also for the maneuvering. Describe the situation as best you can. Note that every turn the damages need to be manually re-evaluated.</p>
+	      </div>
+	      
+	      <div class="btn-group col-md-12">
+		<h3>Compute maneuver</h3>
+		<p>Gives a maneuver to follow, follow the maneuver direction with the indicated veer rating.</p>
+	      </div>
+	      
+	      
+	      
+	      
+	    
+	  </div>
+	</div>
+      </div>
+      
+      
+		     
+
+  </body>
+</html>

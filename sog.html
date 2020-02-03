@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SoG Solo System</title>
+
+    <!-- Bootstrap -->
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="sogstuff/customsog.css" rel="stylesheet">
+
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/npm.js"></script>
+      <script src="js/scripts.js"></script>
+      
+    <![endif]-->
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-81028742-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="sogstuff/sog.js"></script>
+      <div class="navbar navbar-default" role="navigation">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="index.php">Digital Game Aides</a>
+	    </div>
+	    <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav navbar-right">
+		<li class="active"><a href="Sog.html">Solitaire System V1.0</a></li>
+		<!-- <li><a href="soggenerator.html">Mission Generator</a></li> -->
+		<li><a href="howtosog.html">How to use</a></li>
+		<li><a href="http://www.sailsofglory.org/showthread.php?4174-Digital-Game-Aides-Solitaire-Play&p=63383#post63383">Discussion</a></li>
+	      </ul>
+	    </div>
+	  </div>
+      </div>
+      
+    
+      
+      
+      <div class="container">
+	<div class="panel">
+	  <div class="panel-body">
+	    <div class="text-center"><p>For instructions on how to use select "How to use" in the nav bar. Your feedback matters a lot for the software! Go to the <a href="index.php">main page</a> to give your feedback.</p></div>
+		      
+	    
+		      <div class="btn-group btn-group-justified" data-toggle="buttons">
+			<label class="btn btn-primary btn-lg active"  onclick="setShip1()">
+			  <input type="radio" name="options" id="option1" autocomplete="off" checked> Ship 1
+			</label>
+			<label class="btn btn-primary btn-lg" onclick="setShip2()">
+			  <input type="radio" name="options" id="option2" autocomplete="off"> Ship 2
+			</label>
+			<label class="btn btn-primary btn-lg" onclick="setShip3()">
+			  <input type="radio" name="options" id="option3" autocomplete="off"> Ship 3
+			</label>
+			<label class="btn btn-primary btn-lg" onclick="setShip4()">
+			  <input type="radio" name="options" id="option4" autocomplete="off"> Ship 4
+			</label>
+		      </div>
+		      
+		      <p></p>
+		      
+		      
+		      
+		      
+		      <div class= col-md-12">
+			<a href="#damage" data-toggle="modal"><button type="button" id="compute" class="btn btn-primary btn-block" autocomplete="off">
+			  Ship info
+			</button></a>
+			<p></p>
+			
+			<div class="dropdown">
+				    <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+				      Distance
+				      <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				      <li><a onclick="dist1()" href="#tothetop">1 cm</a></li>
+				      <li><a onclick="dist2()" href="#tothetop">2 cm</a></li>
+				      <li><a onclick="dist3()" href="#tothetop">3 cm/1 inch</a></li>
+				      <li><a onclick="dist4()" href="#tothetop">4 cm</a></li>
+				      <li><a onclick="dist5()" href="#tothetop">5 cm/2 inch</a></li>
+				      <li><a onclick="dist6()" href="#tothetop">6 cm</a></li>
+				      <li><a onclick="dist7()" href="#tothetop">7 cm</a></li>
+				      <li><a onclick="dist8()" href="#tothetop">8 cm/3 inch</a></li>
+				      <li><a onclick="dist9()" href="#tothetop">9 cm</a></li>
+				      <li><a onclick="dist10()" href="#tothetop">10 cm/4 inch</a></li>
+				      <li><a onclick="dist11()" href="#tothetop">11 cm</a></li>
+				      <li><a onclick="dist12()" href="#tothetop">12 cm</a></li>
+				      <li><a onclick="dist13()" href="#tothetop">13 cm/5 inch</a></li>
+				      <li><a onclick="dist14()" href="#tothetop">14 cm</a></li>
+				      <li><a onclick="dist15()" href="#tothetop">15 cm/6 inch</a></li>
+				      <li><a onclick="dist16()" href="#tothetop">16 cm</a></li>
+				      <li><a onclick="dist17()" href="#tothetop">17 cm</a></li>
+				      <li><a onclick="dist18()" href="#tothetop">18 cm/7 inch</a></li>
+				      <li><a onclick="dist19()" href="#tothetop">19 cm</a></li>
+				      <li><a onclick="dist20()" href="#tothetop">20 cm/8 inch</a></li>
+				      <li><a onclick="dist21()" href="#tothetop">21 cm</a></li>
+				      <li><a onclick="dist22()" href="#tothetop">22 cm</a></li>
+				      <li><a onclick="dist23()" href="#tothetop">23 cm/9 inch</a></li>
+				      <li><a onclick="dist24()" href="#tothetop">24 cm</a></li>
+				      <li><a onclick="dist25()" href="#tothetop">25 cm/10 inch or more</a></li>
+				      <li><a onclick="dist30()" href="#tothetop">30 cm/12 inch or more</a></li>
+				    </ul>
+				  </div>
+			<p></p>
+				    <div class="dropdown">
+				    <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				      Target ship relative heading
+				      <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				      <li><a onclick="relHead1()" href="#tothetop">0-44 degrees right</a></li>
+				      <li><a onclick="relHead2()" href="#tothetop">45-89 degrees right</a></li>
+				      <li><a onclick="relHead3()" href="#tothetop">90-134 degrees right</a></li>
+				      <li><a onclick="relHead4()" href="#tothetop">135-179 degrees right</a></li>
+				      <li><a onclick="relHead8()" href="#tothetop">0-44 degrees left</a></li>
+				      <li><a onclick="relHead7()" href="#tothetop">45-89 degrees left</a></li>
+				      <li><a onclick="relHead6()" href="#tothetop">90-134 degrees left</a></li>
+				      <li><a onclick="relHead5()" href="#tothetop">135-180 degrees left</a></li>
+				    </ul>
+				  </div>
+			
+			  <p></p>
+			    <p></p>
+			
+		      </div>
+		      
+		      
+		      
+		      
+			  <script src="sogstuff/dial.js"></script>
+			  <script src="sogstuff/combo.js"></script>
+			  <script src="sogstuff/sog.js"></script>
+		
+		
+				<div class="text-center">
+				  <div class="yui3-skin-sam">
+				  
+				      <div id="demo"></div>
+					<p></p>
+				  
+				  </div>
+				  
+				</div>
+			    
+				  
+		      <div class="dropdown">
+				    <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuPrevVeer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				     Select previous maneuver veer rating
+				      <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenuPrevVeer">
+				      <li><a onclick="setPrevVeer0()" href="#tothetop">Previous maneuver had a 0 veer rating</a></li>
+				      <li><a onclick="setPrevVeer1()" href="#tothetop">Previous maneuver had a 1 veer rating</a></li>
+				      <li><a onclick="setPrevVeer2()" href="#tothetop">Previous maneuver had a 2 veer rating</a></li>
+				      <li><a onclick="setPrevVeer3()" href="#tothetop">Previous maneuver had a 3 veer rating</a></li>
+				      <li><a onclick="setPrevVeer4()" href="#tothetop">Previous maneuver had a 4 veer rating</a></li>
+				      <li><a onclick="setPrevVeer5()" href="#tothetop">Previous maneuver had a 5 veer rating</a></li>
+				      <li><a onclick="setPrevVeer6()" href="#tothetop">Previous maneuver had a 6 veer rating</a></li>
+				      <li><a onclick="setPrevVeer7()" href="#tothetop">Previous maneuver had a 7 veer rating</a></li>
+				      <li><a onclick="setPrevVeer8()" href="#tothetop">Previous maneuver had a 8 veer rating</a></li>
+				      <li><a onclick="setPrevVeer9()" href="#tothetop">Previous maneuver had a 9 veer rating</a></li>
+				      <li><a onclick="setPrevVeer10()" href="#tothetop">Previous maneuver had a 10 veer rating</a></li>
+
+				    </ul>
+				  </div>
+			
+			  <p></p>
+				  
+				    
+		      <div class="dropdown">
+				    <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				      Closest point playing area border
+				      <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				      <li><a onclick="setBorder0()" href="#tothetop">More than 27 cm or 11 inch away</a></li>
+				      <li><a onclick="setBorder1()" href="#tothetop">Within 27 cm or 11 inch in zone 1</a></li>
+				      <li><a onclick="setBorder2()" href="#tothetop">Within 27 cm or 11 inch in zone 12</a></li>
+				      <li><a onclick="setBorder3()" href="#tothetop">Within 10 cm or 4 inch in zone 2</a></li>
+				      <li><a onclick="setBorder4()" href="#tothetop">Within 10 cm or 4 inch in zone 11</a></li>
+
+				    </ul>
+				  </div>
+			
+			  <p></p>
+		      <button type="button" class="btn btn-primary btn-block" onclick="cyclewind()" id=cyclingwind>Select wind situation</button>
+			    <p></p>
+			    
+		      
+		      
+		      <div class="col-md-12">
+			  <p></p>
+			    <p></p>
+			<a href="#contact2" data-toggle="modal"><buttontype="button" class="btn btn-danger btn-block" autocomplete="off">
+			  Crew actions and ship damages
+			</button></a>
+		      </div>
+		      
+		      <div class="col-md-12">
+			  <p></p>
+			    <p></p>
+			<a href="#contact" data-toggle="modal"><button onclick="computeManeuver()" type="button" id="compute" class="btn btn-danger btn-block" autocomplete="off">
+			  Compute maneuver
+			</button></a>
+		      </div>
+		       
+		      
+		    
+			
+			
+			
+		      
+		</div>
+		      
+	  </div>
+	</div>
+      </div>
+      
+      <div class="modal fade" id="contact" role="dialog">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <form class="form-horizontal" role="form" method="post">
+			<div class="form-group">
+			   <div class="col-md-12">
+			       	 <h3 class="text-center" id="maneuver"></h3>
+				 <h3 class="text-center" id="maneuverImage"></h3>
+				 <h3 class="text-center" id="debug1"></h3>
+				 <h3 class="text-center" id="debug2"></h3>
+				 <h3 class="text-center" id="debug3"></h3>
+				 <h3 class="text-center" id="debug4"></h3>
+				 <h3 class="text-center" id="debug5"></h3>
+				 <h3 class="text-center" id="debug6"></h3>
+				 <h3 class="text-center" id="debug7"></h3>
+				 <h3 class="text-center" id="debug8"></h3>
+				 <h3 class="text-center" id="debug9"></h3>
+				 <h3 class="text-center" id="debug10"></h3>
+			   </div>
+			</div>
+	  <div class="modal-footer">
+	    <a class="btn btn-default" data-dismiss="modal">Close</a>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+      
+      <div class="modal fade" id="contact2" role="dialog">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <form class="form-horizontal" role="form" method="post">
+		      <h3 class="text-center">Crew actions</h3>
+		      <button type="button" class="btn btn-primary btn-block" onclick="cyclecannons()" id=cyclingcannons>Select loaded cannons</button>
+			    <p></p>
+		      <button type="button" class="btn btn-primary btn-block" onclick="cyclecrewactions()" id=cyclingcrew>Select max crew actions</button>
+			    <p></p>
+		      <button type="button" class="btn btn-primary btn-block" onclick="cyclePrevRepair()" id=cyclingprevrepair>Click for previous repair actions</button>
+			    <p></p>
+		      <button type="button" class="btn btn-primary btn-block" onclick="cycleSailN()" id=cyclingsailN>Click for sails</button>
+			    <p></p>
+		      <button type="button" class="btn btn-primary btn-block" onclick="cycleOtherTargets()" id=cyclingOtherTargets>Click for ships other than main target</button>
+			    <p></p>
+		      <button type="button" class="btn btn-primary btn-block" onclick="cycleCurrentActions()" id=cyclingCurrentActions>Click for running crew actions</button>
+			    <p></p>
+		      <h3 class="text-center">Solo Ship Damages</h3>
+			    <button type="button" class="btn btn-primary btn-block" onclick="cycleFire()" id=cyclingfire>Click for fire condition</button>
+			    <p></p>
+			    <button type="button" class="btn btn-primary btn-block" onclick="cycleLeak()" id=cyclingleak>Click for leak condition</button>
+			    <p></p>
+			    <button type="button" class="btn btn-primary btn-block" onclick="cycleMast()" id=cyclingmast>Click for mast condition</button>
+			    <p></p>
+			    <button type="button" class="btn btn-primary btn-block" onclick="cycleSail()" id=cyclingsails>Click for sail damage</button>
+			    <p></p>
+			    <button type="button" class="btn btn-primary btn-block" onclick="cycleRudder()" id=rudderdamage>Click for rudder condition</button>
+			    <p></p>
+			    <button type="button" class="btn btn-primary btn-block" onclick="cycleDamage()" id=cyclingdamage>Click for general damage condition</button>
+			    <p></p>
+			    <p></p>
+		      <button onclick="computeCrewAction()" type="button" id="computecrew" class="btn btn-danger btn-block" autocomplete="off">
+			  Compute crew actions
+		      </button>
+			<div class="form-group">
+			   <div class="col-md-12">
+			       	 <h3 class="text-center" id="crewAction"></h3>
+				 <h3 class="text-center" id="maneuverImage"></h3>
+			   </div>
+			</div>
+	  <div class="modal-footer">
+	    <a class="btn btn-default" data-dismiss="modal">Close</a>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+      
+      <div class="modal fade" id="damage" role="dialog">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <form class="form-horizontal" role="form" method="post">
+			<div class="form-group">
+			   <div class="col-md-12 text-center">
+			    
+			    
+			    <h3>Solo ship</h3>
+			    <button type="button" class="btn btn-primary btn-block" onclick="cycleManeuver()" id=cyclingman>Select solo ship type</button>
+			    <p></p>
+			    <button type="button" class="btn btn-primary btn-block" onclick="cycleVeer()" id=cyclingveer>Click for ship veer rating</button>
+			    <p></p>
+			    <h3>Target ship</h3>
+			    <button type="button" class="btn btn-primary btn-block" onclick="cycleTargetManeuver()" id=cyclingTargetMan>Select main target ship type</button>
+			    <p></p>
+			    
+				    <p></p>
+			   </div>
+			</div>
+	  <div class="modal-footer">
+	    <a class="btn btn-default" data-dismiss="modal">Close</a>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+      
+		     
+
+  </body>
+</html>

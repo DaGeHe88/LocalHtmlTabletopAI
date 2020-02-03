@@ -1,0 +1,56 @@
+DistStraight1SL
+DistStraight1SR
+DistStraight2SL
+DistStraight2SR
+DistStraight3SL
+DistStraight3SR
+
+DistStraight1FL
+DistStraight1FR
+DistStraight2FL
+DistStraight2FR
+DistStraight3FL
+DistStraight3FR
+
+DistSideslipRight1SL
+DistSideslipRight1SR
+DistSideslipRight2SL
+DistSideslipRight2SR
+DistSideslipRight3SL
+DistSideslipRight3SR
+
+DistSideslipRight1FL
+DistSideslipRight1FR, DistSideslipRight2FL, DistSideslipRight2FR, DistSideslipRight3FL, DistSideslipRight3FR, 
+			 DistShallowestRight1SL, DistShallowestRight1SR, DistShallowestRight2SL, DistShallowestRight2SR, DistShallowestRight3SL, DistShallowestRight3SR, 
+			 DistShallowestRight1FL, DistShallowestRight1FR, DistShallowestRight2FL, DistShallowestRight2FR, DistShallowestRight3FL, DistShallowestRight3FR, 
+			 DistShallowRight1SL, DistShallowRight1SR, DistShallowRight2SL, DistShallowRight2SR, DistShallowRight3SL, DistShallowRight3SR, 
+			 DistShallowRight1FL, DistShallowRight1FR, DistShallowRight2FL, DistShallowRight2FR, DistShallowRight3FL, DistShallowRight3FR, 
+			 DistRight1SL, DistRight1SR, DistRight2SL, DistRight2SR, DistRight3SL,  DistRight3SR, 
+			 DistRight1FL, DistRight1FR, DistRight2FL, DistRight2FR, DistRight3FL, DistRight3FR, 
+			 DistTightRight1SL, DistTightRight1SR, DistTightRight2SL, DistTightRight2SR, DistTightRight3SL, DistTightRight3SR, 
+			 DistTightRight1FL, DistTightRight1FR, DistTightRight2FL, DistTightRight2FR, DistTightRight3FL, DistTightRight3FR, 
+			 DistTightestRight1SL, DistTightestRight1SR, DistTightestRight2SL, DistTightestRight2SR, DistTightestRight3SL, DistTightestRight3SR, 
+			 DistTightestRight1FL, DistTightestRight1FR, DistTightestRight2FL, DistTightestRight2FR, DistTightestRight3FL, DistTightestRight3FR, 
+			 DistOneMastShallowRightSL, DistOneMastShallowRightSR, DistOneMastShallowRightFL, DistOneMastShallowRightFR, 
+			 DistOneMastTightRightSL, DistOneMastTightRightSR, DistOneMastTightRightFL, DistOneMastTightRightFR, 
+			 DistTwoMastShallowRightSL, DistTwoMastShallowRightSR, DistTwoMastShallowRightFL, DistTwoMastShallowRightFR, 
+			 DistTwoMastTightRightSL, DistTwoMastTightRightSR, DistTwoMastTightRightFL, DistTwoMastTightRightFR, 
+			 DistRedStraight1L, DistRedStraight1R, DistRedStraight2L, DistRedStraight2R, 
+			 DistRedRight1L, DistRedRight1R, DistRedRight2L, DistRedRight2R, 
+			 DistSideslipLeft1SR, DistSideslipLeft1SL, DistSideslipLeft2SR, DistSideslipLeft2SL, DistSideslipLeft3SR, DistSideslipLeft3SL, 
+			 DistSideslipLeft1FR, DistSideslipLeft1FL, DistSideslipLeft2FR, DistSideslipLeft2FL, DistSideslipLeft3FR, DistSideslipLeft3FL, 
+			 DistShallowestLeft1SR, DistShallowestLeft1SL, DistShallowestLeft2SR, DistShallowestLeft2SL, DistShallowestLeft3SR, DistShallowestLeft3SL,
+			 DistShallowestLeft1FR, DistShallowestLeft1FL, DistShallowestLeft2FR, DistShallowestLeft2FL, DistShallowestLeft3FR, DistShallowestLeft3FL,
+			 DistShallowLeft1SR, DistShallowLeft1SL, DistShallowLeft2SR, DistShallowLeft2SL, DistShallowLeft3SR, DistShallowLeft3SL,
+			 DistShallowLeft1FR, DistShallowLeft1FL, DistShallowLeft2FR, DistShallowLeft2FL, DistShallowLeft3FR, DistShallowLeft3FL,
+			DistLeft1SR, DistLeft1SL, DistLeft2SR, DistLeft2SL, DistLeft3SR, DistLeft3SL,
+			DistLeft1FR, DistLeft1FL, DistLeft2FR, DistLeft2FL, DistLeft3FR, DistLeft3FL,
+			DistTightLeft1SR, DistTightLeft1SL, DistTightLeft2SR, DistTightLeft2SL, DistTightLeft3SR, DistTightLeft3SL,
+			DistTightLeft1FR, DistTightLeft1FL, DistTightLeft2FR, DistTightLeft2FL, DistTightLeft3FR, DistTightLeft3FL,
+			DistTightestLeft1SR, DistTightestLeft1SL, DistTightestLeft2SR, DistTightestLeft2SL, DistTightestLeft3SR, DistTightestLeft3SL,
+			DistTightestLeft1FR, DistTightestLeft1FL, DistTightestLeft2FR, DistTightestLeft2FL, DistTightestLeft3FR, DistTightestLeft3FL,
+			DistOneMastShallowLeftSR, DistOneMastShallowLeftSL, DistOneMastShallowLeftFR, DistOneMastShallowLeftFL,
+			DistOneMastTightLeftSR, DistOneMastTightLeftSL, DistOneMastTightLeftFR, DistOneMastTightLeftFL,
+			DistTwoMastShallowLeftSR, DistTwoMastShallowLeftSL, DistTwoMastShallowLeftFR, DistTwoMastShallowLeftFL,
+			DistTwoMastTightLeftSR, DistTwoMastTightLeftSL, DistTwoMastTightLeftFR, DistTwoMastTightLeftFL,
+			DistRedLeft1R, DistRedLeft1L, DistRedLeft2R, DistRedLeft2L];
