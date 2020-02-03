@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Armada Solo System</title>
+
+    <!-- Bootstrap -->
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="armadastuff/customarmada.css" rel="stylesheet">
+
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/npm.js"></script>
+      <script src="js/scripts.js"></script>
+      
+    <![endif]-->
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-83726204-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="armadastuff/armada.js"></script>
+      <div class="navbar navbar-inverse" role="navigation">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="index.php">Digital Game Aides</a>
+	    </div>
+	    <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav navbar-right">
+		<li class="active"><a href="wog.html">Armada Solo V1.0</a></li>
+		<!-- <li><a href="patrolgenerator.html">Patrol Generator</a></li> -->
+		<!-- <li><a href="howtoarmada.html">How to use</a></li> -->
+		<!-- <li><a href="http://www.wingsofwar.org/forums/showthread.php?25491-Solo-Software-Official-Thread&p=410746#post410746">Discussion</a></li> -->
+	      </ul>
+	    </div>
+	  </div>
+      </div>
+      
+    
+      
+      
+      <div class="container">
+	
+	<div class="panel">
+	  <div class="panel-body">
+	    <a href="#readb4use" data-toggle="modal"><button type="button" id="compute" class="btn btn-danger btn-block" autocomplete="off">
+			  Read before use
+			</button></a>
+	  </div>
+	</div>
+	
+	<div class="panel">
+	  <div class="panel-body">
+	    
+		<!--       <div class="btn-group btn-group-justified" data-toggle="buttons">
+			<label class="btn btn-primary btn-lg active"  onclick="setShip1()">
+			  <input type="radio" name="options" id="option1" autocomplete="off" checked> Ship 1
+			</label>
+			<label class="btn btn-primary btn-lg" onclick="setShip2()">
+			  <input type="radio" name="options" id="option2" autocomplete="off"> Ship 2
+			</label>
+			<label class="btn btn-primary btn-lg" onclick="setShip3()">
+			  <input type="radio" name="options" id="option3" autocomplete="off"> Ship 3
+			</label>
+			<label class="btn btn-primary btn-lg" onclick="setShip4()">
+			  <input type="radio" name="options" id="option4" autocomplete="off"> Ship 4
+			</label>
+		      </div>
+		      
+		      <p></p>
+			-->
+		     <!--  <a href="#damage" data-toggle="modal"><button type="button" id="compute" class="btn btn-primary btn-block" autocomplete="off">
+			  Solo and target aircraft info
+			</button></a>
+			<p></p> -->
+			<h6 class="text-center">(Best viewed on smarthphones)</h6>
+			<h3 class="text-center">General game info</h3>
+			<h5 class="text-center">Solo fleet</h5>
+			<div class="col-xs-6">
+				    <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuSoloCapital" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    Capital ships
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuSoloCapital">
+					    <li><a onclick="soloCapital0()" href="#tothetop">0</a></li>
+					    <li><a onclick="soloCapital1()" href="#tothetop">1</a></li>
+					    <li><a onclick="soloCapital2()" href="#tothetop">2 or more (not recommended)</a></li>
+
+					  </ul>
+					</div>
+				  </div>
+				  
+				  <div class="col-xs-6">
+				    <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuSoloSquadrons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    Squadrons
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuSoloSquadrons">
+					    <li><a onclick="soloSquadrons0()" href="#tothetop">0</a></li>
+					    <li><a onclick="soloSquadrons1()" href="#tothetop">1</a></li>
+					    <li><a onclick="soloSquadrons2()" href="#tothetop">2</a></li>
+					    <li><a onclick="soloSquadrons3()" href="#tothetop">3</a></li>
+					    <li><a onclick="soloSquadrons4()" href="#tothetop">4</a></li>
+					    <li><a onclick="soloSquadrons5()" href="#tothetop">5</a></li>
+					    <li><a onclick="soloSquadrons6()" href="#tothetop">6</a></li>
+					    <li><a onclick="soloSquadrons7()" href="#tothetop">7</a></li>
+					    <li><a onclick="soloSquadrons8()" href="#tothetop">8</a></li>
+					    <li><a onclick="soloSquadrons9()" href="#tothetop">9</a></li>
+					    <li><a onclick="soloSquadrons10()" href="#tothetop">10</a></li>
+					    <li><a onclick="soloSquadrons10plus()" href="#tothetop">10 or more</a></li>
+
+					  </ul>
+					</div>
+				  </div>
+			<p></p>
+			<p style="padding-top:30px;"></p>
+			<h5 class="text-center">Target fleet</h5>
+			<div class="col-xs-6">
+				    <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuTargetCapital" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    Capital ships
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuTargetCapital">
+					    <li><a onclick="targetCapital0()" href="#tothetop">0</a></li>
+					    <li><a onclick="targetCapital1()" href="#tothetop">1</a></li>
+					    <li><a onclick="targetCapital2()" href="#tothetop">2</a></li>
+					    <li><a onclick="targetCapital3()" href="#tothetop">3</a></li>
+					    <li><a onclick="targetCapital4()" href="#tothetop">4</a></li>
+					    <li><a onclick="targetCapital5()" href="#tothetop">5</a></li>
+
+					  </ul>
+					</div>
+				  </div>
+				  
+				  <div class="col-xs-6">
+				    <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuTargetSquadrons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    Squadrons
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuTargetSquadrons">
+					    <li><a onclick="targetSquadrons0()" href="#tothetop">0</a></li>
+					    <li><a onclick="targetSquadrons1()" href="#tothetop">1</a></li>
+					    <li><a onclick="targetSquadrons2()" href="#tothetop">2</a></li>
+					    <li><a onclick="targetSquadrons3()" href="#tothetop">3</a></li>
+					    <li><a onclick="targetSquadrons4()" href="#tothetop">4</a></li>
+					    <li><a onclick="targetSquadrons5()" href="#tothetop">5</a></li>
+					    <li><a onclick="targetSquadrons6()" href="#tothetop">6</a></li>
+					    <li><a onclick="targetSquadrons7()" href="#tothetop">7</a></li>
+					    <li><a onclick="targetSquadrons8()" href="#tothetop">8</a></li>
+					    <li><a onclick="targetSquadrons9()" href="#tothetop">9</a></li>
+					    <li><a onclick="targetSquadrons10()" href="#tothetop">10</a></li>
+					    <li><a onclick="targetSquadrons10plus()" href="#tothetop">10+</a></li>
+
+					  </ul>
+					</div>
+				  </div>
+			<p></p>
+			<p style="padding-top:30px;"></p>
+			<h3 class="text-center">Solo ship info</h3>
+			<div class="dropdown">
+				    <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuSoloShip" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+				      Select solo ship type
+				      <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenuSoloShip">
+				      <li><a onclick="Gladiator()" href="#tothetop">Gladiator-class Star Destroyer</a></li>
+				      <li><a onclick="Victory()" href="#tothetop">Victory-class Star Destroyer</a></li>
+				      <li><a onclick="Imperial()" href="#tothetop">Imperial-class Star Destroyer</a></li>
+				      <li><a onclick="AC()" href="#tothetop">Imperial Assault Carriers</a></li>
+				      <li><a onclick="Raider()" href="#tothetop">Imperial Raider</a></li>
+				      <li><a onclick="Interdictor()" href="#tothetop">Interdictor</a></li>
+				      <li><a onclick="AFM2()" href="#tothetop">Assault Frigate Mark II</a></li>
+				      <li><a onclick="CR90()" href="#tothetop">CR90 Corellian Corvette</a></li>
+				      <li><a onclick="Nebulon()" href="#tothetop">Nebulon-B Frigate</a></li>
+				      <li><a onclick="MC80()" href="#tothetop">Home One</a></li>
+				      <li><a onclick="MC30()" href="#tothetop">MC30 Frigate</a></li>
+				      <li><a onclick="GR75()" href="#tothetop">Rebel Transports</a></li>
+				      <li><a onclick="MC80bat()" href="#tothetop">MC80 Liberty</a></li>
+				      <!-- <li><a onclick="debug()" href="#tothetop">debug</a></li> -->
+				    </ul>
+				  </div>
+			    <p></p>
+			<!-- 	  <h4 class="text-center">Select available commands</h4>
+				<div class="col-xs-3">
+				  <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuCommand1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    1
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuCommand1">
+					    <li><a onclick="Command1Nav()" href="#tothetop">Navigate</a></li>
+					    <li><a onclick="Command1Squad()" href="#tothetop">Squadron</a></li>
+					    <li><a onclick="Command1Rep()" href="#tothetop">Repair</a></li>
+					    <li><a onclick="Command1Fire()" href="#tothetop">Concentrate Fire</a></li>
+					    <li><a onclick="Command1None()" href="#tothetop">None</a></li>
+					  </ul>
+					</div>
+				</div>
+				  <div class="col-xs-3">
+				  <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuCommand2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    2
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuCommand2">
+					    <li><a onclick="Command2Nav()" href="#tothetop">Navigate</a></li>
+					    <li><a onclick="Command2Squad()" href="#tothetop">Squadron</a></li>
+					    <li><a onclick="Command2Rep()" href="#tothetop">Repair</a></li>
+					    <li><a onclick="Command2Fire()" href="#tothetop">Concentrate Fire</a></li>
+					    <li><a onclick="Command2None()" href="#tothetop">None</a></li>
+					  </ul>
+					</div>
+				  </div>
+				  <div class="col-xs-3">
+				  <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuCommand3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    3
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuCommand3">
+					    <li><a onclick="Command3Nav()" href="#tothetop">Navigate</a></li>
+					    <li><a onclick="Command3Squad()" href="#tothetop">Squadron</a></li>
+					    <li><a onclick="Command3Rep()" href="#tothetop">Repair</a></li>
+					    <li><a onclick="Command3Fire()" href="#tothetop">Concentrate Fire</a></li>
+					    <li><a onclick="Command3None()" href="#tothetop">None</a></li>
+					  </ul>
+					</div>
+				  </div>
+				  <div class="col-xs-3">
+				  
+				  <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuCommand4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    4
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuCommand4">
+					    <li><a onclick="Command4Nav()" href="#tothetop">Navigate</a></li>
+					    <li><a onclick="Command4Squad()" href="#tothetop">Squadron</a></li>
+					    <li><a onclick="Command4Rep()" href="#tothetop">Repair</a></li>
+					    <li><a onclick="Command4Fire()" href="#tothetop">Concentrate Fire</a></li>
+					    <li><a onclick="Command4None()" href="#tothetop">None</a></li>
+					    
+					  </ul>
+					</div>
+				</div> -->
+				  <h4 class="text-center">Select solo ship's values</h4>
+				  
+				  <div class="col-xs-4">
+				    <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuCommand" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    <span style="font-size:smaller;">Command</span>
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuCommand">
+					    <li><a onclick="Command1()" href="#tothetop">1</a></li>
+					    <li><a onclick="Command2()" href="#tothetop">2</a></li>
+					    <li><a onclick="Command3()" href="#tothetop">3</a></li>
+					    <li><a onclick="Command4()" href="#tothetop">4</a></li>
+					    <li><a onclick="Command5()" href="#tothetop">5</a></li>
+					  </ul>
+					</div>
+				  </div>
+				  
+				  <div class="col-xs-4">
+				    <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuSquadron" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    <span style="font-size:smaller;">Squadron</span>
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuSquadron">
+					    <li><a onclick="Squadron1()" href="#tothetop">1</a></li>
+					    <li><a onclick="Squadron2()" href="#tothetop">2</a></li>
+					    <li><a onclick="Squadron3()" href="#tothetop">3</a></li>
+					    <li><a onclick="Squadron4()" href="#tothetop">4</a></li>
+					    <li><a onclick="Squadron5()" href="#tothetop">5</a></li>
+					  </ul>
+					</div>
+				  </div>
+				  
+				  <div class="col-xs-4">
+				    <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuEngineering" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    <span style="font-size:smaller;">Engineering</span>
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuEngineering">
+					    <li><a onclick="Engineering1()" href="#tothetop">1</a></li>
+					    <li><a onclick="Engineering2()" href="#tothetop">2</a></li>
+					    <li><a onclick="Engineering3()" href="#tothetop">3</a></li>
+					    <li><a onclick="Engineering4()" href="#tothetop">4</a></li>
+					    <li><a onclick="Engineering5()" href="#tothetop">5</a></li>
+					  </ul>
+					</div>
+				  </div>
+				  <p style="padding-top:30px;"></p>
+				  <h4 class="text-center">Select solo ship's damage situation</h4>
+				  
+				  <div class="col-xs-6">
+				    <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuShieldDamage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    Damaged shields
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuShieldDamage">
+					    <li><a onclick="ShieldDamage0()" href="#tothetop">0</a></li>
+					    <li><a onclick="ShieldDamage1()" href="#tothetop">1</a></li>
+					    <li><a onclick="ShieldDamage2()" href="#tothetop">2</a></li>
+					    <li><a onclick="ShieldDamage3()" href="#tothetop">3</a></li>
+					    <li><a onclick="ShieldDamage4()" href="#tothetop">4</a></li>
+					    <li><a onclick="ShieldDamage5()" href="#tothetop">4+</a></li>
+					  </ul>
+					</div>
+				  </div>
+				  
+				  <div class="col-xs-6">
+				    <div class="dropdown">
+					  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuDamageCards" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+					    Damage cards
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuDamageCards">
+					    <li><a onclick="DamageCards0()" href="#tothetop">0</a></li>
+					    <li><a onclick="DamageCards1()" href="#tothetop">1</a></li>
+					    <li><a onclick="DamageCards2()" href="#tothetop">2</a></li>
+					    <li><a onclick="DamageCards3()" href="#tothetop">2+</a></li>
+					  </ul>
+					</div>
+				  </div>
+			    <p style="padding-top:30px;"></p>
+			    <button style="border-color: #D3D3D3;" type="button" class="btn btn-primary btn-block" onclick="soloFrontShields()" id=SFS>Select soloship front shield status</button>
+			    <div class="btn-group btn-group-justified">
+			    <a style="border-color: #D3D3D3;" type="button" class="btn btn-primary" onclick="soloLeftShields()" id=SLS>Select left</a>
+			    <a style="border-color: #D3D3D3;" type="button" class="btn btn-primary" onclick="soloRightShields()" id=SRS>Select right</a>
+			    </div>
+			    <button style="border-color: #D3D3D3;" type="button" class="btn btn-primary btn-block" onclick="soloBackShields()" id=SBS>Select rear</button>
+			    <p></p>
+			    <button type="button" class="btn btn-primary btn-block" onclick="selectSoloSpeed()" id=cyclingSoloSpeed>Select solo ship speed</button>
+			    <p></p>
+			    
+			    <h3 class="text-center">Target ship info</h3>
+			   <!-- <button type="button" class="btn btn-primary btn-block" onclick="selectTarget()" id=cyclingTargetMan>Select target ship type</button> -->
+			    <p></p>
+			    <button style="border-color: #D3D3D3;" type="button" class="btn btn-primary btn-block" onclick="targetFrontShields()" id=TFS>Select target front shield status</button>
+			    <div class="btn-group btn-group-justified">
+			    <a style="border-color: #D3D3D3;" type="button" class="btn btn-primary" onclick="targetLeftShields()" id=TLS>Select left</a>
+			    <a style="border-color: #D3D3D3;" type="button" class="btn btn-primary" onclick="targetRightShields()" id=TRS>Select right</a>
+			    </div>
+			    <button style="border-color: #D3D3D3;" type="button" class="btn btn-primary btn-block" onclick="targetBackShields()" id=TBS>Select rear</button>
+			    <p></p>
+			    
+				
+			    
+		      
+		      
+		      
+		      
+		      
+		      <div class= col-md-12">
+
+			
+			<div class="dropdown">
+				    <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" name="tothetop">
+				      Target Distance
+				      <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				      <li><a onclick="dist1()" href="#tothetop">1 cm</a></li>
+				      <li><a onclick="dist2()" href="#tothetop">2 cm</a></li>
+				      <li><a onclick="dist3()" href="#tothetop">3 cm/1 inch</a></li>
+				      <li><a onclick="dist4()" href="#tothetop">4 cm</a></li>
+				      <li><a onclick="dist5()" href="#tothetop">5 cm/2 inch</a></li>
+				      <li><a onclick="dist6()" href="#tothetop">6 cm</a></li>
+				      <li><a onclick="dist7()" href="#tothetop">7 cm</a></li>
+				      <li><a onclick="dist8()" href="#tothetop">8 cm/3 inch</a></li>
+				      <li><a onclick="dist9()" href="#tothetop">9 cm</a></li>
+				      <li><a onclick="dist10()" href="#tothetop">10 cm/4 inch</a></li>
+				      <li><a onclick="dist11()" href="#tothetop">11 cm</a></li>
+				      <li><a onclick="dist12()" href="#tothetop">12 cm</a></li>
+				      <li><a onclick="dist13()" href="#tothetop">13 cm/5 inch</a></li>
+				      <li><a onclick="dist14()" href="#tothetop">14 cm</a></li>
+				      <li><a onclick="dist15()" href="#tothetop">15 cm/6 inch</a></li>
+				      <li><a onclick="dist16()" href="#tothetop">16 cm</a></li>
+				      <li><a onclick="dist17()" href="#tothetop">17 cm</a></li>
+				      <li><a onclick="dist18()" href="#tothetop">18 cm/7 inch</a></li>
+				      <li><a onclick="dist19()" href="#tothetop">19 cm</a></li>
+				      <li><a onclick="dist20()" href="#tothetop">20 cm/8 inch</a></li>
+				      <li><a onclick="dist21()" href="#tothetop">21 cm</a></li>
+				      <li><a onclick="dist22()" href="#tothetop">22 cm</a></li>
+				      <li><a onclick="dist23()" href="#tothetop">23 cm/9 inch</a></li>
+				      <li><a onclick="dist24()" href="#tothetop">24 cm</a></li>
+				      <li><a onclick="dist25()" href="#tothetop">25 cm/10 inch</a></li>
+				      <li><a onclick="dist26()" href="#tothetop">26 cm or more</a></li>
+				    </ul>
+				  </div>
+			<p></p>
+				    <div class="dropdown">
+				    <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				      Target relative heading
+				      <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				      <li><a onclick="relHead1()" href="#tothetop">0-45 degrees right of solo ship</a></li>
+				      <li><a onclick="relHead2()" href="#tothetop">45-90 degrees right of solo ship</a></li>
+				      <li><a onclick="relHead3()" href="#tothetop">90-135 degrees right of solo ship</a></li>
+				      <li><a onclick="relHead4()" href="#tothetop">135-180 degrees right of solo ship</a></li>
+				      <li><a onclick="relHead8()" href="#tothetop">0-45 degrees left of solo ship</a></li>
+				      <li><a onclick="relHead7()" href="#tothetop">45-90 degrees left of solo ship</a></li>
+				      <li><a onclick="relHead6()" href="#tothetop">90-135 degrees left of solo ship</a></li>
+				      <li><a onclick="relHead5()" href="#tothetop">135-180 degrees left of solo ship</a></li>
+				    </ul>
+				  </div>
+			
+			  <p></p>
+			    <p></p>
+			
+		      </div>
+		      
+		      
+		      
+		      <h4 class="text-center">Target relative position</h4>
+			  <script src="armadastuff/dial.js"></script>
+			  <script src="armadastuff/combo.js"></script>
+			  <script src="armadastuff/armada.js"></script>
+		
+		
+				<div class="text-center">
+				  <div class="yui3-skin-sam">
+				  
+				      <div id="demo"></div>
+					<p></p>
+				  
+				  </div>
+				  
+				</div>
+			    
+				  
+			  
+				  
+				    
+		      <!-- <div class="dropdown">
+				    <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				      Closest point playing area border from solo ship
+				      <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+				      <li><a onclick="setBorder0()" href="#tothetop">More than 27 cm or 11 inch away</a></li>
+				      <li><a onclick="setBorder1()" href="#tothetop">Within 27 cm or 11 inch in zone 1</a></li>
+				      <li><a onclick="setBorder2()" href="#tothetop">Within 27 cm or 11 inch in zone 12</a></li>
+				      <li><a onclick="setBorder3()" href="#tothetop">Within 10 cm or 4 inch in zone 2</a></li>
+				      <li><a onclick="setBorder4()" href="#tothetop">Within 10 cm or 4 inch in zone 11</a></li>
+				    </ul>
+		      </div> -->
+		      <p></p>
+		      
+		      
+		      
+		      <div class="col-md-12">
+			  <p></p>
+			    <p></p>
+			<a href="#contactcommand" data-toggle="modal"><button onclick="computeCommand()" type="button" id="compute" class="btn btn-danger btn-block" autocomplete="off">
+			  Compute command
+			</button></a>
+		      </div>
+		      
+		      <div class="col-md-12">
+			  <p></p>
+			    <p></p>
+			<a href="#computeAttack" data-toggle="modal"><button type="button" id="compute" class="btn btn-danger btn-block" autocomplete="off">
+			  Compute attack
+			</button></a>
+		      </div>
+		      
+		      <div class="col-md-12">
+			  <p></p>
+			    <p></p>
+			<a href="#contact" data-toggle="modal"><button onclick="computeManeuver()" type="button" id="compute" class="btn btn-danger btn-block" autocomplete="off">
+			  Compute maneuver
+			</button></a>
+		      </div>
+		      
+		      <div class="col-md-12">
+			  <p></p>
+			    <p></p>
+			<a href="#contactSquadron" data-toggle="modal"><button onclick="computeSquadron()" type="button" id="compute" class="btn btn-danger btn-block" autocomplete="off">
+			  Compute squadron action
+			</button></a>
+		      </div>
+		      
+		      
+		    
+			
+			
+			
+		      
+		</div>
+		      
+	  </div>
+	</div>
+      </div>
+      
+      <div class="modal fade" id="readb4use" role="dialog">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <form class="form-horizontal" role="form" method="post">
+			<div class="form-group">
+			   <div class="col-md-12">
+			    <div class="panel">
+			      <div class="panel-body">
+			       	 <p>Fill in all the data so the AI has something to work with and then press the applicable red "Compute" buttons to let the AI perform an action.
+				  This is still an early version of the software and I will amend only the items I receive feedback about. Go to the <a href="index.php">main page</a> to give your feedback.
+				  Some important notes:</p>
+				    <li>The software is ideally used in a smartphone browser.</li>
+				    <li>The values need to be hand amended (for example, if "Decrease speed" command is given the user needs to change the ship's speed.</li>
+				    <li>Command tokens are computed and played once per turn instead of several turns in advance.</li>
+				    <li>For the solo ship's target use the nearest enemy capital ship (and stick with it). If there is an objective target, flip a coin. Heads the ship goes for the nearest target, tails the ship goes for the objective target.</li>
+				    <li>If you want the software to change/improve give your feedback! Don't be shy. This is the first release so there will still be "gaps" in the rules, please report them as you find them.</li>
+			      </div>
+			    </div>
+			   </div>
+			</div>
+	  <div class="modal-footer">
+	    <a class="btn btn-default" data-dismiss="modal">Close</a>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+      
+      <div class="modal fade" id="contactcommand" role="dialog">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <form class="form-horizontal" role="form" method="post">
+			<div class="form-group">
+			   <div class="col-md-12">
+			       	 <h3 class="text-center" id="crewAction"></h3>
+			  
+			   </div>
+			</div>
+	  <div class="modal-footer">
+	    <a class="btn btn-default" data-dismiss="modal">Close</a>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+      
+      <div class="modal fade" id="computeAttack" role="dialog">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <form class="form-horizontal" role="form" method="post">
+			<div class="form-group">
+			   <div class="col-md-12">
+			    <div class="panel">
+			      <div class="panel-body">
+			       	 <p>This is a work in progress area, for now, use the following standard rules if the solo ship attacks:</p>
+				    <li>Solo ship attacks target's weakest shields available</li>
+				    <li>If solo ship rolls "Accuracy" disable target's defense tokens with the following priority: Scatter, Evade, Brace, Redirect</li>
+				  <p>Use the following standard rules for defending solo ship's:</p>
+				    <li>Use defense tokens with the following priority: Scatter, Evade, Brace, Redirect</li>
+				    <li>Only use Evade at a range where it is effective. Cancel/reroll the strongest die.</li>
+				    <li>Only use Redirect when there are stronger hull zones adjacent to the target one. Transfer damage to the strongest zone.</li>
+				  <p>Obviously you can feel free to fill in the gaps of the software (attacks, target acquisition etc) with your own rules/system.</p>
+			      </div>
+			    </div>
+			   </div>
+			</div>
+	  <div class="modal-footer">
+	    <a class="btn btn-default" data-dismiss="modal">Close</a>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+      
+      <div class="modal fade" id="contact" role="dialog">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <form class="form-horizontal" role="form" method="post">
+			<div class="form-group">
+			   <div class="col-md-12">
+			       	 <h3 class="text-center" id="maneuver4"></h3>
+				 <h3 class="text-center" id="maneuver3"></h3>
+				 <h3 class="text-center" id="maneuver2"></h3>
+				 <h3 class="text-center" id="maneuver1"></h3>
+				 <h3 class="text-center" id="maneuverImage"></h3>
+			   </div>
+			</div>
+	  <div class="modal-footer">
+	    <a class="btn btn-default" data-dismiss="modal">Close</a>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+      
+      <div class="modal fade" id="contactSquadron" role="dialog">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <form class="form-horizontal" role="form" method="post">
+			<div class="form-group">
+			   <div class="col-md-12">
+			       	 <h3 class="text-center" id="squadronAction"></h3>
+			   </div>
+			</div>
+	  <div class="modal-footer">
+	    <a class="btn btn-default" data-dismiss="modal">Close</a>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+      
+      
+      
+		     
+
+  </body>
+</html>
