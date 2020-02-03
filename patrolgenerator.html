@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>WoG Solo System</title>
+
+    <!-- Bootstrap -->
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="wogstuff/customwog.css" rel="stylesheet">
+
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/npm.js"></script>
+      <script src="js/scripts.js"></script>
+      
+    <![endif]-->
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-79946415-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="wogstuff/wogpat2.js"></script>
+      <div class="navbar navbar-default" role="navigation">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="index.php">Digital Game Aides</a>
+	    </div>
+	    <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav navbar-right">
+		<li><a href="wog.html">Solo System V2.2</a></li>
+		<li class="active"><a href="patrolgenerator.html">Patrol Generator</a></li>
+		<li><a href="howtowog.html">How to use</a></li>
+		<li><a href="http://www.wingsofwar.org/forums/showthread.php?25491-Solo-Software-Official-Thread&p=410746#post410746">Discussion</a></li>
+	      </ul>
+	    </div>
+	  </div>
+      </div>
+      
+      <div class="container">
+	      
+      
+	<div class="panel">
+	  <div class="panel-body">
+	    
+		      <div class= col-md-12">
+			<div class="form-group">
+			  <h3 class="text-center">Patrol Encounter Generator</h3>
+			  <p class="text-center h3padding">Don't know what scenario to play? Try out some of the different settings here to generate a nice patrol encounter! If you encounter any
+			  errors make sure you check if your input makes sense. If you are unsure, click "Discussion" in the menu and report your findings.</p>
+			  <label for="sel1">Enemy aircraft</label>
+			  <select onchange="setaAC(this.value)" class="form-inline" id="sel1a">
+			    <option>None</option>
+			    <option value="Curtiss P-40 Warhawk">Curtiss P-40 Warhawk</option>
+			    <option value="P-51D Mustang">P-51D Mustang</option>
+			    <option value="Republic P-47">Republic P-47</option>
+			    <option value="Grummann F4 Wildcat / Marlet"> Grummann F4 Wildcat / Marlet</option>
+			    <option value="Douglas SBD Dauntless">Douglas SBD Dauntless</option>
+			    <option value="North American B-25">North American B-25</option>
+			    <option value="B-17 Flying Fortress">B-17 Flying Fortress</option>
+			    <option value="Hawker Hurricane Mk.I / II">Hawker Hurricane Mk.I / II</option>
+			    <option value="Spitfire Mk.I / II">Spitfire Mk.I / II</option>
+			    <option value="Spitfire Mk.IX">Spitfire Mk.IX</option>
+			    <option value="Bristol Beaufighter">Bristol Beaufighter</option>
+			    <option value="Gloster Gladiator Mk.I">Gloster Gladiator Mk.I</option>
+			    <option value="Avro Lancaster B Mk.III">Avro Lancaster B Mk.III</option>
+			    <option value="Dewoitine D.520">Dewoitine D.520</option>
+			    <option value="Yakovlev Yak-1">Yakovlev Yak-1</option>
+			    <option value="Reggiane Re.2001">Reggiane Re.2001</option>
+			    <option value="Fiat CR.42 Falco">Fiat CR.42 Falco</option>
+			    <option value="FW-190 D-9/D-13">FW-190 D-9/D-13</option>
+			    <option value="Messerschmitt Bf 109E">Messerschmitt Bf 109E</option>
+			    <option value="Messerschmitt Bf.109K">Messerschmitt Bf.109K</option>
+			    <option value="Messerschmitt Bf.110C">Messerschmitt Bf.110C</option>
+			    <option value="Junkers Ju.87 Stuka">Junkers Ju.87 Stuka</option>
+			    <option value="Heinkel He.111">Heinkel He.111</option>
+			    <option value="Mitsubishi A6M2 Reisen">Mitsubishi A6M2 Reisen
+			    <option value="Kawasaki Ki-61">Kawasaki Ki-61</option>
+			    <option value="Nakajima Ki-84">Nakajima Ki-84</option>
+			    <option value="Aichi D3A1 Val">Aichi D3A1 Val</option>
+			    <option value="Yokosuka D4Y Suisei">Yokosuka D4Y Suisei</option>
+			  </select>
+			  <p></p>
+			  <label for="sel1b">Amount</label>
+			  <select onchange="setaACN(this.value)" class="form-inline" id="sel1b">
+			    <option value=0>0</option>
+			    <option value=1>1</option>
+			    <option value=2>2</option>
+			    <option value=3>3</option>
+			    <option value=4>4</option>
+			    <option value=5>5</option>
+			    <option value=6>6</option>
+			    <option value=7>7</option>
+			    <option value=8>8</option>
+			    <option value=9>9</option>
+			    <option value=10>10</option>
+			  </select>
+			</div>
+		      </div>
+		      <div class= col-md-12">
+			<div class="form-group">
+			  <label for="sel2a">Enemy aircraft</label>
+			  <select onchange="setbAC(this.value)" class="form-inline" id="sel2a">
+			    <option>None</option>
+			    <option value="Curtiss P-40 Warhawk">Curtiss P-40 Warhawk</option>
+			    <option value="P-51D Mustang">P-51D Mustang</option>
+			    <option value="Republic P-47">Republic P-47</option>
+			    <option value="Grummann F4 Wildcat / Marlet"> Grummann F4 Wildcat / Marlet</option>
+			    <option value="Douglas SBD Dauntless">Douglas SBD Dauntless</option>
+			    <option value="North American B-25">North American B-25</option>
+			    <option value="B-17 Flying Fortress">B-17 Flying Fortress</option>
+			    <option value="Hawker Hurricane Mk.I / II">Hawker Hurricane Mk.I / II</option>
+			    <option value="Spitfire Mk.I / II">Spitfire Mk.I / II</option>
+			    <option value="Spitfire Mk.IX">Spitfire Mk.IX</option>
+			    <option value="Bristol Beaufighter">Bristol Beaufighter</option>
+			    <option value="Gloster Gladiator Mk.I">Gloster Gladiator Mk.I</option>
+			    <option value="Avro Lancaster B Mk.III">Avro Lancaster B Mk.III</option>
+			    <option value="Dewoitine D.520">Dewoitine D.520</option>
+			    <option value="Yakovlev Yak-1">Yakovlev Yak-1</option>
+			    <option value="Reggiane Re.2001">Reggiane Re.2001</option>
+			    <option value="Fiat CR.42 Falco">Fiat CR.42 Falco</option>
+			    <option value="FW-190 D-9/D-13">FW-190 D-9/D-13</option>
+			    <option value="Messerschmitt Bf 109E">Messerschmitt Bf 109E</option>
+			    <option value="Messerschmitt Bf.109K">Messerschmitt Bf.109K</option>
+			    <option value="Messerschmitt Bf.110C">Messerschmitt Bf.110C</option>
+			    <option value="Junkers Ju.87 Stuka">Junkers Ju.87 Stuka</option>
+			    <option value="Heinkel He.111">Heinkel He.111</option>
+			    <option value="Mitsubishi A6M2 Reisen">Mitsubishi A6M2 Reisen
+			    <option value="Kawasaki Ki-61">Kawasaki Ki-61</option>
+			    <option value="Nakajima Ki-84">Nakajima Ki-84</option>
+			    <option value="Aichi D3A1 Val">Aichi D3A1 Val</option>
+			    <option value="Yokosuka D4Y Suisei">Yokosuka D4Y Suisei</option>
+			  </select>
+			  <p></p>
+			  <label for="sel2b">Amount</label>
+			  <select onchange="setbACN(this.value)" class="form-inline" id="sel2b">
+			    <option value=0>0</option>
+			    <option value=1>1</option>
+			    <option value=2>2</option>
+			    <option value=3>3</option>
+			    <option value=4>4</option>
+			    <option value=5>5</option>
+			    <option value=6>6</option>
+			    <option value=7>7</option>
+			    <option value=8>8</option>
+			    <option value=9>9</option>
+			    <option value=10>10</option>
+			  </select>
+			</div>
+		      </div>
+		      <div class= col-md-12">
+			<div class="form-group">
+			  <label for="sel1">Enemy aircraft</label>
+			  <select onchange="setcAC(this.value)" class="form-inline" id="sel1a">
+			   <option>None</option>
+			    <option value="Curtiss P-40 Warhawk">Curtiss P-40 Warhawk</option>
+			    <option value="P-51D Mustang">P-51D Mustang</option>
+			    <option value="Republic P-47">Republic P-47</option>
+			    <option value="Grummann F4 Wildcat / Marlet"> Grummann F4 Wildcat / Marlet</option>
+			    <option value="Douglas SBD Dauntless">Douglas SBD Dauntless</option>
+			    <option value="North American B-25">North American B-25</option>
+			    <option value="B-17 Flying Fortress">B-17 Flying Fortress</option>
+			    <option value="Hawker Hurricane Mk.I / II">Hawker Hurricane Mk.I / II</option>
+			    <option value="Spitfire Mk.I / II">Spitfire Mk.I / II</option>
+			    <option value="Spitfire Mk.IX">Spitfire Mk.IX</option>
+			    <option value="Bristol Beaufighter">Bristol Beaufighter</option>
+			    <option value="Gloster Gladiator Mk.I">Gloster Gladiator Mk.I</option>
+			    <option value="Avro Lancaster B Mk.III">Avro Lancaster B Mk.III</option>
+			    <option value="Dewoitine D.520">Dewoitine D.520</option>
+			    <option value="Yakovlev Yak-1">Yakovlev Yak-1</option>
+			    <option value="Reggiane Re.2001">Reggiane Re.2001</option>
+			    <option value="Fiat CR.42 Falco">Fiat CR.42 Falco</option>
+			    <option value="FW-190 D-9/D-13">FW-190 D-9/D-13</option>
+			    <option value="Messerschmitt Bf 109E">Messerschmitt Bf 109E</option>
+			    <option value="Messerschmitt Bf.109K">Messerschmitt Bf.109K</option>
+			    <option value="Messerschmitt Bf.110C">Messerschmitt Bf.110C</option>
+			    <option value="Junkers Ju.87 Stuka">Junkers Ju.87 Stuka</option>
+			    <option value="Heinkel He.111">Heinkel He.111</option>
+			    <option value="Mitsubishi A6M2 Reisen">Mitsubishi A6M2 Reisen
+			    <option value="Kawasaki Ki-61">Kawasaki Ki-61</option>
+			    <option value="Nakajima Ki-84">Nakajima Ki-84</option>
+			    <option value="Aichi D3A1 Val">Aichi D3A1 Val</option>
+			    <option value="Yokosuka D4Y Suisei">Yokosuka D4Y Suisei</option>
+			  </select>
+			  <p></p>
+			  <label for="sel1b">Amount</label>
+			  <select onchange="setcACN(this.value)" class="form-inline" id="sel1b">
+			    <option value=0>0</option>
+			    <option value=1>1</option>
+			    <option value=2>2</option>
+			    <option value=3>3</option>
+			    <option value=4>4</option>
+			    <option value=5>5</option>
+			    <option value=6>6</option>
+			    <option value=7>7</option>
+			    <option value=8>8</option>
+			    <option value=9>9</option>
+			    <option value=10>10</option>
+			  </select>
+			</div>
+		      </div>
+		      <div class= col-md-12">
+			<div class="form-group">
+			  <label for="sel1">Enemy aircraft</label>
+			  <select onchange="setdAC(this.value)" class="form-inline" id="sel1a">
+			    <option>None</option>
+			    <option value="Curtiss P-40 Warhawk">Curtiss P-40 Warhawk</option>
+			    <option value="P-51D Mustang">P-51D Mustang</option>
+			    <option value="Republic P-47">Republic P-47</option>
+			    <option value="Grummann F4 Wildcat / Marlet"> Grummann F4 Wildcat / Marlet</option>
+			    <option value="Douglas SBD Dauntless">Douglas SBD Dauntless</option>
+			    <option value="North American B-25">North American B-25</option>
+			    <option value="B-17 Flying Fortress">B-17 Flying Fortress</option>
+			    <option value="Hawker Hurricane Mk.I / II">Hawker Hurricane Mk.I / II</option>
+			    <option value="Spitfire Mk.I / II">Spitfire Mk.I / II</option>
+			    <option value="Spitfire Mk.IX">Spitfire Mk.IX</option>
+			    <option value="Bristol Beaufighter">Bristol Beaufighter</option>
+			    <option value="Gloster Gladiator Mk.I">Gloster Gladiator Mk.I</option>
+			    <option value="Avro Lancaster B Mk.III">Avro Lancaster B Mk.III</option>
+			    <option value="Dewoitine D.520">Dewoitine D.520</option>
+			    <option value="Yakovlev Yak-1">Yakovlev Yak-1</option>
+			    <option value="Reggiane Re.2001">Reggiane Re.2001</option>
+			    <option value="Fiat CR.42 Falco">Fiat CR.42 Falco</option>
+			    <option value="FW-190 D-9/D-13">FW-190 D-9/D-13</option>
+			    <option value="Messerschmitt Bf 109E">Messerschmitt Bf 109E</option>
+			    <option value="Messerschmitt Bf.109K">Messerschmitt Bf.109K</option>
+			    <option value="Messerschmitt Bf.110C">Messerschmitt Bf.110C</option>
+			    <option value="Junkers Ju.87 Stuka">Junkers Ju.87 Stuka</option>
+			    <option value="Heinkel He.111">Heinkel He.111</option>
+			    <option value="Mitsubishi A6M2 Reisen">Mitsubishi A6M2 Reisen
+			    <option value="Kawasaki Ki-61">Kawasaki Ki-61</option>
+			    <option value="Nakajima Ki-84">Nakajima Ki-84</option>
+			    <option value="Aichi D3A1 Val">Aichi D3A1 Val</option>
+			    <option value="Yokosuka D4Y Suisei">Yokosuka D4Y Suisei</option>
+			  </select>
+			  <p></p>
+			  <label for="sel1b">Amount</label>
+			  <select onchange="setdACN(this.value)" class="form-inline" id="sel1b">
+			    <option value=0>0</option>
+			    <option value=1>1</option>
+			    <option value=2>2</option>
+			    <option value=3>3</option>
+			    <option value=4>4</option>
+			    <option value=5>5</option>
+			    <option value=6>6</option>
+			    <option value=7>7</option>
+			    <option value=8>8</option>
+			    <option value=9>9</option>
+			    <option value=10>10</option>
+			  </select>
+			</div>
+		      </div>
+
+		      
+		      
+		      <div class= col-md-12">
+			<button type="button" class="btn btn-primary btn-block" onclick="cycleNtype()" id=cycling2>Mix of selected aircraft</button>
+		      </div>
+		      <div class= col-md-12">
+			<button type="button" class="btn btn-primary btn-block" onclick="cycleNbogeys()" id=cycling1>Selected number of bogeys</button>
+		      </div>
+		      <div class= col-md-12">
+			<button type="button" class="btn btn-primary btn-block" onclick="cycleAltitude()" id=cycling3>Target at random altitude</button>
+		      </div>
+		      
+		      
+		      
+		      
+		      
+		      
+		      
+		      <div class="col-md-12">
+			  <p></p>
+			    <p></p>
+			<a a href="#contact" data-toggle="modal"><button onclick="generatePatrol()" type="button" id="compute" class="btn btn-danger btn-block" autocomplete="off">
+			  Generate Patrol
+			</button></a>
+		      </div>
+		      <div class="col-md-12">
+			  <p></p>
+			    <p></p>
+			<a a href="#contact2" data-toggle="modal"><button onclick="eventGenerator()" type="button" id="compute" class="btn btn-danger btn-block" autocomplete="off">
+			  Generate Event
+			</button></a>
+		      </div>
+		      
+		    
+			
+			
+			
+		      
+		</div>
+		      
+	  </div>
+	</div>
+      </div>
+      
+      <div class="modal fade" id="contact" role="dialog">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <form class="form-horizontal" role="form" method="post">
+			<div class="form-group">
+			   <div class="col-md-12">
+			       	 <h3 class="text-center" id="genpatrol"></h3>
+				 <h3 class="text-center" id="genpatrol2"></h3>
+			   </div>
+			</div>
+	  <div class="modal-footer">
+	    <a class="btn btn-default" data-dismiss="modal">Close</a>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+      
+      <div class="modal fade" id="contact2" role="dialog">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <form class="form-horizontal" role="form" method="post">
+			<div class="form-group">
+			   <div class="col-md-12">
+			       	 <h3 class="text-center" id="genevent"></h3>
+			   </div>
+			</div>
+	  <div class="modal-footer">
+	    <a class="btn btn-default" data-dismiss="modal">Close</a>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+		     
+
+  </body>
+</html>

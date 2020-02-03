@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>WoG Solo System</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="wogstuff/customwog.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/npm.js"></script>
+      <script src="js/scripts.js"></script>
+
+    <![endif]-->
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-79946415-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+    
+      <div class="navbar navbar-default" role="navigation">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="index.php">Digital Game Aides</a>
+	    </div>
+	    <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav navbar-right">
+		<li><a href="wog.html">Solo System V2.2</a></li>
+		<li><a href="patrolgenerator.html">Patrol Generator</a></li>
+		<li class="active"><a href="howtowog.html">How to use</a></li>
+		<li><a href="http://www.wingsofwar.org/forums/showthread.php?25491-Solo-Software-Official-Thread&p=410746#post410746">Discussion</a></li>
+	      </ul>
+	    </div>
+	  </div>
+      </div>
+      
+    
+      
+      
+      <div class="container">
+	<div class="panel">
+	  <div class="panel-body">
+		
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h1>Welcome</h1>
+			<p>Welcome to the web based solo software used with Wings of War/Glory. It is best viewed and used on mobile devices.
+			For any kind of feedback contact me via the "Feedback" button on the main "Digital Game Aides" page by pressing the link in the top left corner. This project will only improve with input from users.
+			Even 1 user that supplies good input will result in the generating of a newer version of the software. Feedback can (but should not be limitied to) include:</p>
+			<li>Bugs and other non compatibility</li>
+			<li>Different maneuvers</li>
+			<li>New features (this one is hard to incorporate quickly but I am interested nonetheless)</li>
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h1>Quick Reference on how to use the software</h1>
+			<p>After picking a target for the AI, the user (human player) tells the AI player what the current situation looks like by selecting the following:</p>
+			<li>Solo Aircraft maneuver deck</li>
+			<li>Enable any damages to be taken into account</li>
+			<li>Target Aircraft maneuver deck</li>
+			<li>Altitude situation</li>
+			<li>Target distance (from center point to center point)</li>
+			<li>Target relative heading (degrees)</li>
+			<li>Target relative position (1-12 zones)</li>
+			<li>Distance to the end of the playing area</li>
+			<p>After that is selected the user presses compute and follows as closely as possible the given maneuver for the AI player to perform. If no selections other than the zone is made
+			then the default setting is for both target and solo aircraft high performance at a distance of 20 cm. If the solo aircraft is clearly tailing it's target then follow the
+			opponents maneuver as closely as possible and roll a dice to determine at which speed.</p>
+			
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h1>Expanded explanation on how to use the software</h1>
+			<h3>Picking a target</h3>
+			<p>I have seen that this is highly subjective to the person setting up the scenario and I advise you apply some personal preference to this but the following rules should hold up pretty good:</p>
+			<li>In general, solo aircraft pick the closest target and then stick to it. If a target appears within gun range AND has a relative heading of less than 90 degrees left and 90 degrees
+			right then you can roll a dice (or flipping a coin) giving a 50% chance that the solo aircraft will follow it's new target.</li>
+			<li>When playing a scenario like bomber intercept (or including other mission specific aircraft) roll a dice at the beginning of the game giving a 50 % chance to focus on mission targets or any targets.
+			If the focus is on mission targets than the previous rule applies again. It is up to the player to decide if the solo aircraft can switch mid game to any target if the opportunity comes up.</li>
+			<p>This is likely to receive some form of automation in later version</p>
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>A/C 1 to 4</h3>
+			<p>This feature remembers settings for up to 4 solo aircraft.</p>
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>Solo and target aircraft info (pop up menu)</h3>
+			<p>This opens a pop up where you can edit either aircraft info.</p>
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>Select solo aircraft decktype (cycles on click)</h3>
+			<p>Choices are large maneuver decks (high performance), small maneuver decks (low performance) and bomber decks (I-Deck)
+			Somewhere in the future these will (hopefully) include every individual maneuver deck.</p>
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>Aircraft Damages (cycles on click)</h3>
+			<p>Here you can cycle through engine and rudder condition.</p>
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>Select target aircraft decktype (cycles on click)</h3>
+			<p>Choices are large maneuver decks (high performance), small maneuver decks (low performance) and bomber decks (I-Deck)</p>
+			<p>Somewhere in the future these will (hopefully) include every individual maneuver deck.</p>
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>Relative Heading (dropdown)</h3>
+			<p>Basically, which direction is the target aircraft pointing compared to the solo aircraft.
+			For example: If the solo aircraft is heading North and the target is heading West then the relative heading is 90 degrees left
+			or for example: if the solo aircraft is heading South and the target aircraft is heading East then the relative heading is also 90 degrees left</p>
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>Zone dial</h3>
+			<p>Based on the commonly used 12 zones not the "hours" system. So Zone 12 is slightly offset to the left and Zone 1
+			slightly offset to the right etc. etc.</p>
+			<p>Zone 0 means the aircraft is tailing</p>
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>Closest point playing area border (dropdown)</h3>
+			<p>Here you can select the distance to the closest point on the edge(border) of the playing area.</p>
+		      </div>
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>Compute</h3>
+			<p>This computes the maneuver. Since it's quite easy to accidentally click compute twice the maneuver pops in a modal. Press close before recomputing.
+			Make sure that all questions are answered, then follow the instructions for
+			the maneuver as best you can. This is universal software and the capable maneuvers differ
+			from aircraft to aircraft.</p>
+			<p>The software actually looks which maneuvers bring him at the best location in regards to where the target is expected to be. In other words, the software
+			looks 1 move ahead. There is a 3/7th chance it will do the best maneuver and a 4/7th chance it will do either the 2nd best or 3rd best maneuver to keep
+			it unpredictable.</p>
+		      </div>
+		      
+		      
+		      <div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>What to expect in future versions (not a guarantee) in it's order of importance</h3>
+			<li> General improvements in the workings of the software</li>
+			<li> Individual aircraft maneuver decks</li>
+		      </div>
+			
+			<div class="btn-group col-md-12" data-toggle="buttons">
+			<h3>About the programmer</h3>
+			<p>This software is entirely handcoded by Daan Herman using certain open source elements and inspiration from Joaquim's diceless solo rules.</p>
+			<p>If you wish to use any of my code feel free to do so. If you turn my code into a product or services that requires payment
+			you will need my permission.</p>
+		      </div>
+			
+			
+			
+			
+			
+		      
+		</div>
+		      
+	  </div>
+	</div>
+      </div>
+
+	
+
+      
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
